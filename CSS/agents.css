@@ -1,0 +1,536 @@
+@font-face {
+  font-family: 'Protest Guerrilla';
+  src: url(../ASSET/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf) format('truetype');
+}
+  
+@font-face {
+  font-family: 'Protest Strike';
+  src: url(../ASSET/fonts/Protest_Strike/ProtestStrike-Regular.ttf) format('truetype');
+}
+  
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #040C2B;  
+  max-height: 80px;
+  border-bottom: 5px solid #b71724;
+}
+  
+  
+.left-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+  
+.logo img {
+  height: 60px; 
+  width: auto;
+}
+  
+.palorant-logo-nav img {
+  height: 60px; 
+  width: auto;
+}
+  
+.nav-link{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.nav-link a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Protest Guerrilla';
+  font-size: large;
+  transition: color 0.3s ease-in-out;
+}
+  
+.nav-link a:hover{
+  color: #DB5151;
+}
+
+.nav-link a.active {
+  position: relative;
+  color: #ff4655 !important;
+} 
+
+.content-1{
+  padding: 120px 40px 60px;
+  background-color: #496378;
+  min-height: 100vh;
+}
+
+.title-c1{
+  font-family: 'Protest Guerrilla';
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.role-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.role-card{
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(164, 129, 129, 0.9);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 5px solid #ff4655;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.role-card.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.role-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.role-icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border-style: double;
+  margin: 0 auto 20px;
+  background-color: #496378;
+}
+
+.role-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.role-title{
+  font-family: 'Protest Guerrilla';
+  color: #0f1923;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.role-desc{
+  color: #496378;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.content-2{
+  background-color: white;
+  padding: 20px;
+}
+
+.title-c2 {
+  font-family: 'Protest Guerrilla';
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  color: #496378;
+  margin: 2rem 0;
+  letter-spacing: 1px;
+}
+
+.agent-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.agent-card {
+  background: #040C2B;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-top: 15px solid #b71724;
+  box-shadow: 0 10px 20px rgb(0, 0, 0);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 350px;
+  width: 100%;
+}
+
+.agent-card a{
+  text-decoration: none;
+}
+
+.card-header {
+  height: auto;
+  overflow: hidden;
+}
+
+.agent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card-body {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  border-top: 4px solid white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-body img {
+  height: auto;
+  width: 30px;
+}
+
+.agent-name {
+  font-family: 'Protest Guerrilla';
+  color: white;
+  font-size: 1.4rem;
+}
+
+.agent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 70, 85, 0.2);
+}
+
+.agent-card:hover .agent-image {
+  transform: scale(1.05);
+}
+
+.footer{
+    height: 25px;
+    background-color: #040C2B;
+}
+  
+.logo-foot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040C2B;
+}
+  
+.logo-foot img{
+  height: 60px;
+  width: auto;
+}
+  
+.foot-title{
+  color:#496378;
+  background-color: #040C2B;
+  /* font-family: 'Protest Strike'; */
+  font-size: 20px;
+  width: 100%;
+}
+  
+.title-foot{
+  text-align: center;
+}
+  
+.sosmed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040C2B;
+  padding: 10px;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  padding: 10px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 30px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: left center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(-7px, -15px);
+  width: 50px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 3.9px);
+  width: 50px;
+}
+
+@media (max-width: 768px){
+  nav {
+    padding: 0 15px;
+    height: 70px;
+  }
+  
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-link {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: auto;
+    width: 180px;
+    max-width: 300px;
+    max-height: 450px;
+    background-color: #040C2B;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    border-bottom-left-radius: 35px;
+  }
+
+  .nav-link.active {
+    right: 0;
+    margin-top: 70px;
+  }
+
+  .nav-link li {
+    width: 100%;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+  }
+
+  .nav-link li:hover {
+    transform: translateX(5px);
+  }
+
+  .nav-link a {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .rb {
+    color: #ff4655;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.menu-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+  
+.logo img,
+.palorant-logo-nav img {
+  height: 50px;
+}
+
+.title-c1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+  
+.role-container{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.agent-cards {
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 30px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+@media (max-width: 410px){
+  nav {
+    height: 70px;
+    padding: 0 15px;
+    position: fixed; 
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-link {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 225px;
+    height: 100vh;
+    background-color: #040C2B;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px 0 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 35px;
+  }
+
+  .nav-link li {
+    width: 100%;
+    margin: 1px 0;
+    padding: 8px 50px;
+  }
+
+  .nav-link a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    display: block;
+    width: 50%;
+  }
+
+  .left-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo img,
+  .palorant-logo-nav img {
+    height: 40px;
+  }
+
+  .title-c1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+  }
+  
+  .role-container{
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 20px;
+  }
+
+  .role-title{
+    font-family: 'Protest Guerrilla';
+    color: #0f1923;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+  }
+
+  .role-icon{
+    width: 50px;
+    height: 50px;
+  }
+
+  .role-desc {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+  }
+
+  .role-card {
+    border-radius: 15px;
+    padding: 2px;
+    border-top: 5px solid #ff4655;
+  }
+
+  .card-body {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .agent-cards {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    padding: 0px;
+  }
+
+  .agent-name {
+    font-size: 1.1rem;
+  }
+
+  .agent-card {
+    border-top: 7px solid #b71724;
+    height: 200px;
+  }
+}

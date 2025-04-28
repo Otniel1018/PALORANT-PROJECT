@@ -1,0 +1,486 @@
+@font-face {
+    font-family: 'Protest Guerrilla';
+    src: url(../ASSET/fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf) format('truetype');
+  }
+  
+@font-face {
+    font-family: 'Protest Strike';
+    src: url(../ASSET/fonts/Protest_Strike/ProtestStrike-Regular.ttf) format('truetype');
+}
+  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+  
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #040C2B;  
+  max-height: 80px;
+  border-bottom: 5px solid #b71724;
+}
+  
+  
+.left-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+  
+.logo img {
+  height: 60px; 
+  width: auto;
+}
+  
+.palorant-logo-nav img {
+  height: 60px; 
+  width: auto;
+}
+  
+.nav-link{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.nav-link a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Protest Guerrilla';
+  font-size: large;
+  transition: color 0.3s ease-in-out;
+}
+  
+.nav-link a:hover{
+  color: #DB5151;
+}
+  
+.nav-link a.active {
+  position: relative;
+  color: #ff4655 !important;
+}
+
+.content-1 {
+  background-color: #496378;
+}
+
+.title-c1 {
+  padding: 100px 0 20px;
+  font-family: 'Protest Guerrilla';
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.map-display {
+  display: flex;
+  border-top: 5px solid #b71724;
+  padding: 20px;
+  gap: 40px;
+}
+
+.map-image-container {
+  flex: 1;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.map-display-name {
+  padding: 50px 0 0 0;
+  margin-left: 35px;
+  font-family: 'Protest Guerrilla';
+  color: #D2CDC7;
+  font-size: 3rem;
+}
+
+.map-display-desc {
+  color: white;
+  padding: 35px;
+  text-align: left;
+}
+
+#map-image {
+  padding: 10px;
+  width: 500px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.map-track-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+  background-color: rgba(4, 12, 43, 0.7);
+}
+
+.map-track {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  width: max-content;
+}
+
+.map-thumbnail {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.map-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.map-thumbnail img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #b71724;
+  border-radius: 5px;
+}
+
+.map-thumbnail span {
+  display: block;
+  margin-top: 5px;
+  font-family: 'Protest Guerrilla';
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer{
+  height: 25px;
+  background-color: #040C2B;
+}
+  
+.logo-foot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040C2B;
+}
+  
+.logo-foot img{
+  height: 60px;
+  width: auto;
+}
+  
+.foot-title{
+  color:#496378;
+  background-color: #040C2B;
+  font-family: 'Protest Strike';
+  font-size: 20px;
+  width: 100%;
+}
+  
+.title-foot{
+  text-align: center;
+  padding: 10px;
+}
+  
+.sosmed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040C2B;
+  padding: 10px;
+  gap: 20px;
+}
+  
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  padding: 10px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+  
+.hamburger span {
+  height: 3px;
+  width: 30px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: left center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(-7px, -15px);
+  width: 50px;
+}
+  
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+  
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 3.9px);
+  width: 50px;
+ }
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 15px;
+    height: 70px;
+  }
+  
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-link {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: auto;
+    width: 180px;
+    max-width: 300px;
+    max-height: 450px;
+    background-color: #040C2B;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    border-bottom-left-radius: 35px;
+  }
+
+  .nav-link.active {
+    right: 0;
+    margin-top: 70px;
+  }
+
+  .nav-link li {
+    width: 100%;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+  }
+
+  .nav-link li:hover {
+    transform: translateX(5px);
+  }
+
+  .nav-link a {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .rb {
+    color: #ff4655;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .map-display {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .map-image-container {
+    min-width: 100%;
+    order: 1; /* Gambar di atas */
+  }
+
+  #map-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #map-image.minimap {
+    width: 200px;
+    height: auto;
+  }
+
+  .map-detail {
+    order: 2; /* Deskripsi di bawah */
+    padding: 15px;
+  }
+
+  .map-display-name {
+    padding: 20px 0 0 0;
+    margin-left: 15px;
+    font-size: 2rem;
+  }
+
+  .map-display-desc {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .map-track-container {
+    padding: 15px 0;
+  }
+
+  .map-track {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .map-thumbnail {
+    width: 120px;
+  }
+
+  .map-thumbnail img {
+    height: 70px;
+  }
+
+  .map-thumbnail span {
+    font-size: 0.8rem;
+  }
+
+  .title-c1 {
+    padding: 80px 0 15px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  nav {
+    height: 70px;
+    padding: 0 15px;
+    position: fixed; 
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-link {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 225px;
+    height: 100vh;
+    background-color: #040C2B;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px 0 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 35px;
+  }
+
+  .nav-link li {
+    width: 100%;
+    margin: 1px 0;
+    padding: 8px 50px;
+  }
+
+  .nav-link a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    display: block;
+    width: 50%;
+  }
+
+  .left-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo img,
+  .palorant-logo-nav img {
+    height: 40px;
+  }
+
+  .map-display {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  #map-image {
+    padding: 5px;
+  }
+
+  #map-image.minimap {
+    width: 150px;
+  }
+
+  .map-display-name {
+    font-size: 1.8rem;
+    margin-left: 10px;
+    padding-top: 15px;
+  }
+
+  .map-display-desc {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .map-track {
+    gap: 10px;
+    margin-left: 175px;
+  }
+
+  .map-thumbnail {
+    width: 100px;
+  }
+
+  .map-thumbnail img {
+    height: 60px;
+  }
+
+  .map-thumbnail span {
+    font-size: 0.7rem;
+  }
+
+  .title-c1 {
+    padding: 70px 0 10px;
+    font-size: 2.5rem;
+  }
+}
