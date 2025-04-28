@@ -104,6 +104,7 @@ nav{
   border: 5px solid black;
 }
 
+/* form */
 .form-name {
   display: flex;
   flex-direction: column;
