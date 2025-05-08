@@ -401,11 +401,12 @@ nav{
   padding: 15px;
 }
 
-@media (max-width: 410px){
+@media (max-width: 410px) {
   nav {
     height: 70px;
     padding: 0 15px;
-    position: fixed; 
+    position: fixed;
+    width: 100%;
   }
   
   .hamburger {
@@ -436,7 +437,7 @@ nav{
   }
 
   .hamburger.active span:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .hamburger.active span:nth-child(3) {
@@ -445,34 +446,39 @@ nav{
 
   .nav-link {
     position: fixed;
-    top: 0;
+    top: 70px;
     right: -100%;
-    width: 225px;
-    height: 100vh;
+    width: 70%;
+    height: calc(100vh - 70px);
     background-color: #040C2B;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px 0 0;
+    align-items: center;
+    padding: 20px 0;
     transition: right 0.3s ease;
     z-index: 1000;
     border-bottom-left-radius: 35px;
   }
 
+  .nav-link.active {
+    right: 0;
+  }
+
   .nav-link li {
     width: 100%;
-    margin: 1px 0;
-    padding: 8px 50px;
+    margin: 5px 0;
+    padding: 10px 0;
+    text-align: center;
   }
 
   .nav-link a {
-    font-size: 1.2rem;
-    padding: 5px 0;
+    font-size: 1.1rem;
+    padding: 8px 15px;
     display: block;
-    width: 50%;
+    width: 100%;
   }
 
   .left-nav {
-    width: 100%;
+    width: auto;
     justify-content: flex-start;
   }
 
@@ -481,56 +487,100 @@ nav{
     height: 40px;
   }
 
+  .content-1 {
+    padding: 100px 15px 30px;
+  }
+
   .title-c1 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
   }
   
-  .role-container{
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 20px;
-  }
-
-  .role-title{
-    font-family: 'Protest Guerrilla';
-    color: #0f1923;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 1.4rem;
-  }
-
-  .role-icon{
-    width: 50px;
-    height: 50px;
-  }
-
-  .role-desc {
-    font-size: 0.6rem;
-    margin-bottom: 10px;
+  .role-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .role-card {
-    border-radius: 15px;
-    padding: 2px;
-    border-top: 5px solid #ff4655;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .card-body {
-    gap: 10px;
-    padding: 20px;
+  .role-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .role-title {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  .role-desc {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .content-2 {
+    padding: 30px 10px;
+  }
+
+  .title-c2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
   }
 
   .agent-cards {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    padding: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .agent-card {
+    height: 220px;
+    border-top: 10px solid #b71724;
+  }
+
+  .card-body {
+    padding: 15px 5px;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .agent-name {
     font-size: 1.1rem;
   }
 
-  .agent-card {
-    border-top: 7px solid #b71724;
-    height: 200px;
+  .card-body img {
+    width: 25px;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+
+  .logo-foot img {
+    height: 50px;
+  }
+
+  .title-foot {
+    font-size: 0.7rem;
+    padding: 0 10px;
+  }
+
+  .sosmed {
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .sosmed img {
+    width: 25px;
+    height: 25px;
   }
 }
