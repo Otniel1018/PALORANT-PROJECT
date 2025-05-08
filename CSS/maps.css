@@ -302,7 +302,7 @@ nav{
 
   .map-image-container {
     min-width: 100%;
-    order: 1; /* Gambar di atas */
+    order: 1;
   }
 
   #map-image {
@@ -316,7 +316,7 @@ nav{
   }
 
   .map-detail {
-    order: 2; /* Deskripsi di bawah */
+    order: 2;
     padding: 15px;
   }
 
